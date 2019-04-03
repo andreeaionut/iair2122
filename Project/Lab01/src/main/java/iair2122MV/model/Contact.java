@@ -73,15 +73,13 @@ public class Contact {
 	
 	private static boolean validName(String str)
 	{
-		
-		String[] s = str.split("[\\p{Punct}\\s]+");
-		if (s.length>2) return false;
+		if (str.length()<2) return false;
 		return true;
 	}
 
 	private static boolean validAddress(String str)
 	{
-		return true;
+		return str.length() > 2;
 	}
 	
 	private static boolean validTelefon(String tel)

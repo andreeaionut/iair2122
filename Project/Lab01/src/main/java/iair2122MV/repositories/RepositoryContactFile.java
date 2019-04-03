@@ -27,8 +27,7 @@ public class RepositoryContactFile implements RepositoryContact {
 				try {
 					c = Contact.fromString(line, "#");
 				} catch (InvalidFormatException e) {
-					throw new Exception("Error in file at line " + i,
-							new Throwable(e.getCause().getMessage()));
+					throw new InvalidFormatException("Error in file at line " + i);
 				}
 				contacts.add(c);
 				i++;
@@ -49,6 +48,11 @@ public class RepositoryContactFile implements RepositoryContact {
 	@Override
 	public void addContact(Contact contact) {
 		contacts.add(contact);
+	}
+
+	public void addContact(String name, String address, String telefon) throws InvalidFormatException {
+		Contact c = new Contact(name, address, telefon);
+		addContact(c);
 	}
 
 	@Override
