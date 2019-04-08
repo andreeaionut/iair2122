@@ -1,7 +1,6 @@
 package iair2122MV;
 
 import iair2122MV.exceptions.InvalidFormatException;
-import iair2122MV.model.Contact;
 import iair2122MV.repositories.RepositoryContactFile;
 import org.junit.Before;
 import org.junit.Test;
