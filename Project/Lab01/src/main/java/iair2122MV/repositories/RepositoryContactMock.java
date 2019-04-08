@@ -6,7 +6,7 @@ import iair2122MV.model.Contact;
 import java.util.LinkedList;
 import java.util.List;
 
-public class RepositoryContactMock implements RepositoryContact {
+public class RepositoryContactMock implements IRepository<Contact> {
 
 private List<Contact> contacts;
 	
@@ -25,17 +25,18 @@ private List<Contact> contacts;
 	}
 
 	@Override
-	public List<Contact> getContacts() {
+	public List<Contact> getAll() {
 		return new LinkedList<Contact>(contacts);
 	}
 
 	@Override
-	public void addContact(Contact contact) {
+	public boolean add(Contact contact) {
 		contacts.add(contact);
+		return true;
 	}
 
 	@Override
-	public boolean removeContact(Contact contact) {
+	public boolean remove(Contact contact) {
 		int index = contacts.indexOf(contact);
 		if (index < 0) return false;
 		else contacts.remove(index);
@@ -43,7 +44,7 @@ private List<Contact> contacts;
 	}
 
 	@Override
-	public boolean saveContracts() {
+	public boolean save() {
 		return true;
 	}
 
@@ -53,7 +54,11 @@ private List<Contact> contacts;
 	}
 
 	@Override
-	public Contact getByName(String string) {
+	public List<Contact> getByName(String name) {
+		return null;
+	}
+
+	public Contact getContactByName(String string) {
 		for(Contact c : contacts)
 			if (c.getName().equals(string)) return c;
 		return null;

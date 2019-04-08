@@ -27,7 +27,7 @@ public class ContactTest {
     @Test
     public void testBVA_3() throws InvalidFormatException {
         this.repositoryContactFile.addContact("PPP", "AAA", "+4078");
-        assert this.repositoryContactFile.getByName("PPP") != null;
+        assert this.repositoryContactFile.getContactByName("PPP") != null;
     }
 
     @Test(expected = InvalidFormatException.class)
@@ -38,7 +38,7 @@ public class ContactTest {
     @Test
     public void testECP_1() throws InvalidFormatException {
         this.repositoryContactFile.addContact("PPPP", "AAA", "+4078");
-        assert this.repositoryContactFile.getByName("PPPP") != null;
+        assert this.repositoryContactFile.getContactByName("PPPP") != null;
     }
 
     @Test(expected = InvalidFormatException.class)
@@ -49,6 +49,6 @@ public class ContactTest {
     @Test
     public void testECP_5() throws InvalidFormatException {
         this.repositoryContactFile.addContact("PPP", "AAA", "0730");
-        assert this.repositoryContactFile.getByName("PPP") != null;
+        assert this.repositoryContactFile.getContactByName("PPP") != null;
     }
 }

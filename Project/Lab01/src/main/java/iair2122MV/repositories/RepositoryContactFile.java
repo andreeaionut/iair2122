@@ -7,7 +7,7 @@ import java.io.*;
 import java.util.LinkedList;
 import java.util.List;
 
-public class RepositoryContactFile implements RepositoryContact {
+public class RepositoryContactFile implements IRepository<Contact> {
 
 	private static final String filename = "src\\main\\files\\contacts.txt";
 	private List<Contact> contacts;
@@ -41,22 +41,23 @@ public class RepositoryContactFile implements RepositoryContact {
 	}
 
 	@Override
-	public List<Contact> getContacts() {
+	public List<Contact> getAll() {
 		return new LinkedList<Contact>(contacts);
 	}
 
 	@Override
-	public void addContact(Contact contact) {
+	public boolean add(Contact contact) {
 		contacts.add(contact);
+		return true;
 	}
 
 	public void addContact(String name, String address, String telefon) throws InvalidFormatException {
 		Contact c = new Contact(name, address, telefon);
-		addContact(c);
+		add(c);
 	}
 
 	@Override
-	public boolean removeContact(Contact contact) {
+	public boolean remove(Contact contact) {
 		int index = contacts.indexOf(contact);
 		if (index < 0)
 			return false;
@@ -66,7 +67,7 @@ public class RepositoryContactFile implements RepositoryContact {
 	}
 
 	@Override
-	public boolean saveContracts() {
+	public boolean save() {
 		PrintWriter pw = null;
 		try{
 			pw = new PrintWriter(new FileOutputStream(filename));
@@ -88,9 +89,13 @@ public class RepositoryContactFile implements RepositoryContact {
 	}
 
 	@Override
-	public Contact getByName(String string) {
+	public List<Contact> getByName(String name) {
+		return null;
+	}
+
+	public Contact getContactByName(String contactName) {
 		for (Contact c : contacts)
-			if (c.getName().equals(string))
+			if (c.getName().equals(contactName))
 				return c;
 		return null;
 	}

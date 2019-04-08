@@ -1,6 +1,6 @@
 package iair2122MV.model;
 
-import iair2122MV.repositories.RepositoryContact;
+import iair2122MV.repositories.RepositoryContactFile;
 
 import java.util.Date;
 import java.util.LinkedList;
@@ -100,7 +100,7 @@ public class Activity {
 		return sb.toString();
 	}
 
-	public static Activity fromString(String line, RepositoryContact repcon) {
+	public static Activity fromString(String line, RepositoryContactFile repcon) {
 		try {
 			String[] str = line.split("#");
 			String name = str[0];
@@ -109,7 +109,7 @@ public class Activity {
 			String description = str[3];
 			List<Contact> conts = new LinkedList<Contact>();
 			for (int i = 5; i < str.length; i++) {
-				conts.add(repcon.getByName(str[i]));
+				conts.add(repcon.getContactByName(str[i]));
 			}
 			return new Activity(name, start, duration, conts, description);
 		} catch (Exception e) {

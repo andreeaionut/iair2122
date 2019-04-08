@@ -7,12 +7,12 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
-public class RepositoryActivityFile implements RepositoryActivity{
+public class RepositoryActivityFile implements IRepository<Activity>{
 
 	private static final String filename = "src\\main\\files\\activities.txt";
 	private List<Activity> activities;
 	
-	public RepositoryActivityFile(RepositoryContact repcon) throws Exception
+	public RepositoryActivityFile(RepositoryContactFile repcon) throws Exception
 	{
 		activities = new LinkedList<Activity>(); 
 		//DateFormat df = new SimpleDateFormat("MM/dd/yyyy HH:mm");
@@ -37,12 +37,12 @@ public class RepositoryActivityFile implements RepositoryActivity{
 	}
 	
 	@Override
-	public List<Activity> getActivities() {
+	public List<Activity> getAll() {
 		return new LinkedList<Activity>(activities);
 	}
 
 	@Override
-	public boolean addActivity(Activity activity) {
+	public boolean add(Activity activity) {
 		int  i = 0;
 		boolean conflicts = false;
 
@@ -70,7 +70,7 @@ public class RepositoryActivityFile implements RepositoryActivity{
 	}
 
 	@Override
-	public boolean removeActivity(Activity activity) {
+	public boolean remove(Activity activity) {
 		int index = activities.indexOf(activity);
 		if (index<0) return false;
 		activities.remove(index);
@@ -78,7 +78,7 @@ public class RepositoryActivityFile implements RepositoryActivity{
 	}
 
 	@Override
-	public boolean saveActivities() {
+	public boolean save() {
 		PrintWriter pw = null;
 		try{
 			pw = new PrintWriter(new FileOutputStream(filename));
@@ -100,50 +100,49 @@ public class RepositoryActivityFile implements RepositoryActivity{
 	}
 	
 	@Override
-	public List<Activity> activitiesByName(String name) {
-		List<Activity> result1 = new LinkedList<Activity>();
+	public List<Activity> getByName(String name) {
+		List<Activity> partialResuly = new LinkedList<Activity>();
 		for (Activity a : activities)
-			if (a.getName().equals(name) == false) result1.add(a);
+			if (a.getName().equals(name) == false) partialResuly.add(a);
 		List<Activity> result = new LinkedList<Activity>();
-		while (result1.size() > 0 )
+		while (partialResuly.size() > 0 )
 		{
-			Activity ac = result1.get(0);
+			Activity ac = partialResuly.get(0);
 			int index = 0;
-			for (int i = 1; i<result1.size(); i++)
-				if (ac.getStart().compareTo(result1.get(i).getStart())<0) 
+			for (int i = 1; i<partialResuly.size(); i++)
+				if (ac.getStart().compareTo(partialResuly.get(i).getStart())<0)
 				{
 					index = i;
-					ac = result1.get(i);
+					ac = partialResuly.get(i);
 				}
 			result.add(ac);
-			result1.remove(index);
+			partialResuly.remove(index);
 		}
 		return result;
 	}
 
 	@SuppressWarnings("deprecation")
-	@Override
 	public List<Activity> activitiesOnDate(String name, Date d) {
-		List<Activity> result1 = new LinkedList<Activity>();
-		for (Activity a : activities)
-			if (a.getName().equals(name))
-				if ((a.getStart().getYear() == d.getYear() &&
-					a.getStart().getMonth() == d.getMonth() &&
-					a.getStart().getDate() == d.getDate())) result1.add(a);
+		List<Activity> partialResult = new LinkedList<Activity>();
+		for (Activity activity : activities)
+			if (activity.getName().equals(name))
+				if ((activity.getStart().getYear() == d.getYear() &&
+					activity.getStart().getMonth() == d.getMonth() &&
+					activity.getStart().getDate() == d.getDate())) partialResult.add(activity);
 		List<Activity> result = new LinkedList<Activity>();
-		while (result1.size() > 0 )
+		while (partialResult.size() > 0 )
 		{
-			Activity ac = result1.get(0);
+			Activity activity = partialResult.get(0);
 			int index = 0;
-			for (int i = 1; i<result1.size(); i++)
-				if (ac.getStart().compareTo(result1.get(i).getStart())>0) 
+			for (int activityCounter = 1; activityCounter<partialResult.size(); activityCounter++)
+				if (activity.getStart().compareTo(partialResult.get(activityCounter).getStart())>0)
 				{
-					index = i;
-					ac = result1.get(i);
+					index = activityCounter;
+					activity = partialResult.get(activityCounter);
 				}
 			
-			result.add(ac);
-			result1.remove(index);
+			result.add(activity);
+			partialResult.remove(index);
 		}
 		return result;
 	}

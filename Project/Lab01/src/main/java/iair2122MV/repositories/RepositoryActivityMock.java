@@ -7,7 +7,7 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
-public class RepositoryActivityMock implements RepositoryActivity {
+public class RepositoryActivityMock implements IRepository<Activity> {
 
 	private List<Activity> activities;
 	
@@ -40,12 +40,12 @@ public class RepositoryActivityMock implements RepositoryActivity {
 	}
 	
 	@Override
-	public List<Activity> getActivities() {
+	public List<Activity> getAll() {
 		return new LinkedList<Activity>(activities);
 	}
 
 	@Override
-	public boolean addActivity(Activity activity) {
+	public boolean add(Activity activity) {
 		int  i = 0;
 		boolean conflicts = false;
 		
@@ -73,7 +73,7 @@ public class RepositoryActivityMock implements RepositoryActivity {
 	}
 
 	@Override
-	public boolean removeActivity(Activity activity) {
+	public boolean remove(Activity activity) {
 		int index = activities.indexOf(activity);
 		if (index<0) return false;
 		activities.remove(index);
@@ -81,7 +81,7 @@ public class RepositoryActivityMock implements RepositoryActivity {
 	}
 
 	@Override
-	public boolean saveActivities() {
+	public boolean save() {
 		return true;
 	}
 
@@ -91,14 +91,13 @@ public class RepositoryActivityMock implements RepositoryActivity {
 	}
 
 	@Override
-	public List<Activity> activitiesByName(String name) {
+	public List<Activity> getByName(String name) {
 		List<Activity> result = new LinkedList<Activity>();
 		for (Activity a : activities)
 			if (a.getName().equals(name)) result.add(a);
 		return result;
 	}
 
-	@Override
 	public List<Activity> activitiesOnDate(String name, Date d) {
 		List<Activity> result = new LinkedList<Activity>();
 		for (Activity a : activities)

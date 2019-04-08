@@ -24,9 +24,9 @@ public class MainClass {
 	public static void main(String[] args) {
 		BufferedReader in = null;
 		try {
-			RepositoryContact contactRep = new RepositoryContactFile();
-			RepositoryUser userRep = new RepositoryUserFile();
-			RepositoryActivity activityRep = new RepositoryActivityFile(
+			RepositoryContactFile contactRep = new RepositoryContactFile();
+			RepositoryUserFile userRep = new RepositoryUserFile();
+			RepositoryActivityFile activityRep = new RepositoryActivityFile(
 					contactRep);
 
 			User user = null;
@@ -37,7 +37,7 @@ public class MainClass {
 				System.out.printf("Enter password: ");
 				String p = in.readLine();
 
-				user = userRep.getByUsername(u);
+				user = ((RepositoryUserFile) userRep).getByUsername(u);
 				if (user != null && user.isPassword(p))
 					break;
 			}
@@ -73,7 +73,7 @@ public class MainClass {
 		System.out.println("Program over and out\n");
 	}
 
-	private static void afisActivitate(RepositoryActivity activityRep,
+	private static void afisActivitate(RepositoryActivityFile activityRep,
 			BufferedReader in, User user) {
 		try {
 			System.out.printf("Afisare Activitate: \n");
@@ -102,8 +102,8 @@ public class MainClass {
 		}
 	}
 
-	private static void adaugActivitate(RepositoryActivity activityRep,
-			RepositoryContact contactRep, BufferedReader in, User user) {
+	private static void adaugActivitate(RepositoryActivityFile activityRep,
+			RepositoryContactFile contactRep, BufferedReader in, User user) {
 		try {
 			System.out.printf("Adauga Activitate: \n");
 			System.out.printf("Descriere: ");
@@ -135,7 +135,7 @@ public class MainClass {
 			Activity act = new Activity(user.getName(), start, end,
 					new LinkedList<Contact>(), description);
 
-			activityRep.addActivity(act);
+			activityRep.add(act);
 
 			System.out.printf("S-a adugat cu succes\n");
 		} catch (IOException e) {
@@ -143,7 +143,7 @@ public class MainClass {
 		}
 	}
 
-	private static void adaugContact(RepositoryContact contactRep,
+	private static void adaugContact(RepositoryContactFile contactRep,
 			BufferedReader in) {
 
 		try {
@@ -157,7 +157,7 @@ public class MainClass {
 			
 			Contact c = new Contact(name, adress, telefon);
 
-			contactRep.addContact(c);
+			contactRep.add(c);
 
 			System.out.printf("S-a adugat cu succes\n");
 		} catch (IOException e) {
