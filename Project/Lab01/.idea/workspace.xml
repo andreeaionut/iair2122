@@ -13,44 +13,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainClass.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="users.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/files/users.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainClass.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="32" />
+            <state relative-caret-position="1275">
+              <caret line="75" column="61" selection-start-line="75" selection-start-column="61" selection-end-line="75" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Contact.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/model/Contact.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="90" column="20" lean-forward="true" selection-start-line="90" selection-start-column="20" selection-end-line="90" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/repositories/IRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RepositoryActivityMock.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/repositories/RepositoryActivityMock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="100" selection-start-line="100" selection-end-line="100" />
-              <folding>
-                <element signature="e#1033#1034#0" expanded="true" />
-                <element signature="e#1083#1084#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,8 +37,8 @@
       <file leaf-file-name="RepositoryActivityFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/repositories/RepositoryActivityFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="742">
-              <caret line="139" column="44" lean-forward="true" selection-start-line="139" selection-start-column="44" selection-end-line="139" selection-end-column="44" />
+            <state relative-caret-position="340">
+              <caret line="25" column="24" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="24" />
               <folding>
                 <element signature="e#1073#1074#0" expanded="true" />
                 <element signature="e#1123#1124#0" expanded="true" />
@@ -68,6 +46,212 @@
                 <element signature="e#2364#2365#0" expanded="true" />
                 <element signature="e#2964#2996#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContactTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/iair2122MV/ContactTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-307">
+              <caret line="17" column="59" lean-forward="true" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JAVA/iair2122MV" pinned="false" current-in-tab="true">
+        <entry file="uml://JAVA/iair2122MV">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>iair2122MV</OriginalElement>
+              <nodes>
+                <node x="861.3812499999999" y="514.0">iair2122MV.repositories.RepositoryContactFile</node>
+                <node x="764.5822916666664" y="0.0">iair2122MV.exceptions.InvalidFormatException</node>
+                <node x="637.7291666666665" y="770.0">iair2122MV.model.Activity</node>
+                <node x="126.91666666666652" y="836.0">iair2122MV.model.User</node>
+                <node x="664.3333333333333" y="1168.0">iair2122MV.repositories.RepositoryActivityFile</node>
+                <node x="642.1458333333333" y="1454.0">iair2122MV.MainClass</node>
+                <node x="10.5" y="1146.0">iair2122MV.repositories.RepositoryUserFile</node>
+                <node x="729.5822916666664" y="80.0">iair2122MV.model.Contact</node>
+                <node x="527.2291666666665" y="525.0">iair2122MV.repositories.RepositoryContactMock</node>
+                <node x="396.2791666666664" y="146.0">iair2122MV.repositories.IRepository</node>
+                <node x="345.3333333333332" y="1168.0">iair2122MV.repositories.RepositoryActivityMock</node>
+                <node x="1238.0270833333332" y="0.0">iair2122MV.repositories.RepositoryUserMock</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="iair2122MV.repositories.RepositoryUserFile" target="iair2122MV.repositories.IRepository">
+                  <point x="-102.0" y="-114.0" />
+                  <point x="61.5" y="1126.0" />
+                  <point x="105.28937499999984" y="1126.0" />
+                  <point x="105.28937499999984" y="494.0" />
+                  <point x="417.37916666666644" y="494.0" />
+                  <point x="-84.39999999999998" y="81.0" />
+                </edge>
+                <edge source="iair2122MV.repositories.RepositoryContactFile" target="iair2122MV.model.Contact">
+                  <point x="22.25" y="-103.0" />
+                  <point x="1017.1312499999999" y="414.0" />
+                  <point x="911.0822916666664" y="414.0" />
+                  <point x="60.5" y="147.0" />
+                </edge>
+                <edge source="iair2122MV.model.Activity" target="iair2122MV.repositories.RepositoryContactFile">
+                  <point x="108.66666666666674" y="-158.0" />
+                  <point x="909.3958333333333" y="750.0" />
+                  <point x="894.7562499999999" y="750.0" />
+                  <point x="-100.125" y="103.0" />
+                </edge>
+                <edge source="iair2122MV.MainClass" target="iair2122MV.repositories.RepositoryUserFile">
+                  <point x="-156.91666666666686" y="-70.0" />
+                  <point x="754.2291666666663" y="1414.0" />
+                  <point x="240.0" y="1414.0" />
+                  <point x="76.5" y="114.0" />
+                </edge>
+                <edge source="iair2122MV.repositories.RepositoryContactMock" target="iair2122MV.repositories.IRepository">
+                  <point x="-100.80000000000007" y="-92.0" />
+                  <point x="552.4291666666663" y="494.0" />
+                  <point x="543.9791666666663" y="494.0" />
+                  <point x="42.19999999999993" y="81.0" />
+                </edge>
+                <edge source="iair2122MV.repositories.RepositoryActivityMock" target="iair2122MV.repositories.IRepository">
+                  <point x="-99.66666666666674" y="-92.0" />
+                  <point x="395.16666666666646" y="1126.0" />
+                  <point x="460.29791666666654" y="1126.0" />
+                  <point x="-42.19999999999999" y="81.0" />
+                </edge>
+                <edge source="iair2122MV.MainClass" target="iair2122MV.model.Activity">
+                  <point x="22.41666666666663" y="-70.0" />
+                  <point x="933.5624999999998" y="1424.0" />
+                  <point x="973.8333333333333" y="1424.0" />
+                  <point x="973.8333333333333" y="1116.0" />
+                  <point x="882.2291666666665" y="1116.0" />
+                  <point x="81.49999999999999" y="158.0" />
+                </edge>
+                <edge source="iair2122MV.MainClass" target="iair2122MV.model.Contact">
+                  <point x="246.58333333333337" y="-70.0" />
+                  <point x="1157.7291666666665" y="1434.0" />
+                  <point x="1168.0270833333332" y="1434.0" />
+                  <point x="1168.0270833333332" y="394.0" />
+                  <point x="959.4822916666662" y="394.0" />
+                  <point x="108.89999999999986" y="147.0" />
+                </edge>
+                <edge source="iair2122MV.MainClass" target="iair2122MV.model.User">
+                  <point x="-112.08333333333348" y="-70.0" />
+                  <point x="799.0624999999998" y="1404.0" />
+                  <point x="334.83333333333326" y="1404.0" />
+                  <point x="334.83333333333326" y="1126.0" />
+                  <point x="338.5833333333332" y="1126.0" />
+                  <point x="84.66666666666669" y="92.0" />
+                </edge>
+                <edge source="iair2122MV.repositories.RepositoryContactFile" target="iair2122MV.repositories.IRepository">
+                  <point x="-111.25" y="-103.0" />
+                  <point x="883.6312499999999" y="444.0" />
+                  <point x="586.1791666666663" y="444.0" />
+                  <point x="84.39999999999998" y="81.0" />
+                </edge>
+                <edge source="iair2122MV.repositories.RepositoryUserFile" target="iair2122MV.model.User">
+                  <point x="102.0" y="-114.0" />
+                  <point x="265.5" y="1126.0" />
+                  <point x="253.91666666666652" y="1126.0" />
+                  <point x="0.0" y="92.0" />
+                </edge>
+                <edge source="iair2122MV.MainClass" target="iair2122MV.exceptions.InvalidFormatException">
+                  <point x="-246.5833333333336" y="-70.0" />
+                  <point x="664.5624999999995" y="1434.0" />
+                  <point x="0.0" y="1434.0" />
+                  <point x="0.0" y="50.0" />
+                  <point x="781.7822916666664" y="50.0" />
+                  <point x="-68.79999999999995" y="15.0" />
+                </edge>
+                <edge source="iair2122MV.MainClass" target="iair2122MV.repositories.RepositoryActivityFile">
+                  <point x="-67.25000000000011" y="-70.0" />
+                  <point x="843.895833333333" y="1394.0" />
+                  <point x="739.0833333333333" y="1394.0" />
+                  <point x="-74.75" y="92.0" />
+                </edge>
+                <edge source="iair2122MV.model.Contact" target="iair2122MV.exceptions.InvalidFormatException">
+                  <point x="0.0" y="-147.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="iair2122MV.repositories.RepositoryActivityFile" target="iair2122MV.repositories.RepositoryContactFile">
+                  <point x="112.12499999999999" y="-92.0" />
+                  <point x="925.9583333333333" y="1126.0" />
+                  <point x="998.5416666666665" y="1126.0" />
+                  <point x="998.5416666666665" y="750.0" />
+                  <point x="961.5062499999999" y="750.0" />
+                  <point x="-33.375" y="103.0" />
+                </edge>
+                <edge source="iair2122MV.repositories.RepositoryActivityMock" target="iair2122MV.model.Activity">
+                  <point x="0.0" y="-92.0" />
+                  <point x="494.8333333333332" y="1116.0" />
+                  <point x="664.8958333333331" y="1116.0" />
+                  <point x="-135.83333333333337" y="158.0" />
+                </edge>
+                <edge source="iair2122MV.repositories.RepositoryContactMock" target="iair2122MV.exceptions.InvalidFormatException">
+                  <point x="-50.40000000000009" y="-92.0" />
+                  <point x="602.8291666666664" y="494.0" />
+                  <point x="640.5822916666664" y="494.0" />
+                  <point x="640.5822916666664" y="60.0" />
+                  <point x="816.1822916666665" y="60.0" />
+                  <point x="-34.39999999999998" y="15.0" />
+                </edge>
+                <edge source="iair2122MV.repositories.RepositoryActivityFile" target="iair2122MV.model.Activity">
+                  <point x="-37.375" y="-92.0" />
+                  <point x="776.4583333333333" y="1126.0" />
+                  <point x="773.5624999999998" y="1126.0" />
+                  <point x="-27.166666666666742" y="158.0" />
+                </edge>
+                <edge source="iair2122MV.repositories.RepositoryActivityFile" target="iair2122MV.repositories.IRepository">
+                  <point x="-112.125" y="-92.0" />
+                  <point x="701.7083333333333" y="1106.0" />
+                  <point x="513.9893749999998" y="1106.0" />
+                  <point x="513.9893749999998" y="494.0" />
+                  <point x="501.7791666666664" y="494.0" />
+                  <point x="0.0" y="81.0" />
+                </edge>
+                <edge source="iair2122MV.model.Activity" target="iair2122MV.model.Contact">
+                  <point x="-108.66666666666674" y="-158.0" />
+                  <point x="692.0624999999998" y="750.0" />
+                  <point x="789.7291666666665" y="750.0" />
+                  <point x="789.7291666666665" y="484.0" />
+                  <point x="814.2822916666664" y="484.0" />
+                  <point x="-36.299999999999955" y="147.0" />
+                </edge>
+                <edge source="iair2122MV.MainClass" target="iair2122MV.repositories.RepositoryContactFile">
+                  <point x="112.08333333333337" y="-70.0" />
+                  <point x="1023.2291666666665" y="1404.0" />
+                  <point x="1097.1352083333331" y="1404.0" />
+                  <point x="1097.1352083333331" y="750.0" />
+                  <point x="1028.25625" y="750.0" />
+                  <point x="33.375" y="103.0" />
+                </edge>
+                <edge source="iair2122MV.repositories.RepositoryContactFile" target="iair2122MV.exceptions.InvalidFormatException">
+                  <point x="66.75" y="-103.0" />
+                  <point x="1061.63125" y="484.0" />
+                  <point x="1116.6541666666667" y="484.0" />
+                  <point x="1116.6541666666667" y="60.0" />
+                  <point x="884.9822916666665" y="60.0" />
+                  <point x="34.39999999999998" y="15.0" />
+                </edge>
+                <edge source="iair2122MV.repositories.RepositoryContactMock" target="iair2122MV.model.Contact">
+                  <point x="100.79999999999995" y="-92.0" />
+                  <point x="754.0291666666665" y="474.0" />
+                  <point x="790.0822916666664" y="474.0" />
+                  <point x="-60.5" y="147.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="617.0" y="1358.5" />
+              <SelectedNodes>
+                <node>iair2122MV.MainClass</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Methods</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
             </state>
           </provider>
         </entry>
@@ -100,8 +284,8 @@
       <file leaf-file-name="RepositoryUserFile.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/repositories/RepositoryUserFile.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+            <state relative-caret-position="204">
+              <caret line="51" column="70" lean-forward="true" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1386#1387#0" expanded="true" />
@@ -122,8 +306,8 @@
       <file leaf-file-name="Activity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/model/Activity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="969">
-              <caret line="107" selection-start-line="107" selection-end-line="107" />
+            <state relative-caret-position="1513">
+              <caret line="111" column="50" selection-start-line="111" selection-start-column="50" selection-end-line="111" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -154,18 +338,18 @@
         <option value="$PROJECT_DIR$/src/main/java/iair2122MV/repositories/RepositoryContact.java" />
         <option value="$PROJECT_DIR$/src/main/java/iair2122MV/exceptions/InvalidFormatException.java" />
         <option value="$PROJECT_DIR$/src/main/java/iair2122MV/model/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iair2122MV/model/Activity.java" />
         <option value="$PROJECT_DIR$/src/main/java/iair2122MV/repositories/RepositoryUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iair2122MV/MainClass.java" />
         <option value="$PROJECT_DIR$/src/main/java/iair2122MV/model/Contact.java" />
         <option value="$PROJECT_DIR$/src/main/files/contacts.txt" />
         <option value="$PROJECT_DIR$/src/test/java/iair2122MV/ContactTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/iair2122MV/repositories/IRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/iair2122MV/repositories/RepositoryActivityFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/iair2122MV/repositories/RepositoryActivityMock.java" />
         <option value="$PROJECT_DIR$/src/main/java/iair2122MV/repositories/RepositoryContactFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/iair2122MV/repositories/RepositoryContactMock.java" />
         <option value="$PROJECT_DIR$/src/main/java/iair2122MV/repositories/RepositoryUserFile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iair2122MV/repositories/RepositoryActivityFile.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iair2122MV/model/Activity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/iair2122MV/MainClass.java" />
       </list>
     </option>
   </component>
@@ -251,25 +435,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="iair2122MV" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iair2122" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lab01" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="iair2122MV" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="window" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="iair2122" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lab01" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="iair2122MV" type="462c0819:PsiDirectoryNode" />
               <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -314,7 +479,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Docs/Lab01" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -482,14 +647,11 @@
       <workItem from="1551957443491" duration="399000" />
       <workItem from="1552503713831" duration="128000" />
       <workItem from="1554283334930" duration="5170000" />
-      <workItem from="1554701539823" duration="1377000" />
+      <workItem from="1554701539823" duration="3420000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ContactTest - 2019.04.03 at 14h 03m 33s.xml">
-      <configuration name="ContactTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="ContactTest - 2019.04.03 at 14h 07m 25s.xml">
       <configuration name="ContactTest" configurationId="JUnit" />
     </history-entry>
@@ -517,9 +679,12 @@
     <history-entry file="ContactTest - 2019.04.03 at 14h 11m 47s.xml">
       <configuration name="ContactTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ContactTest - 2019.04.08 at 08h 58m 35s.xml">
+      <configuration name="ContactTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9315000" />
+    <option name="totallyTimeSpent" value="11358000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -536,13 +701,14 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.2217514" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49932885" weight="0.32909605" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50067115" side_tool="true" weight="0.32909605" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" weight="0.32909605" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49932885" visible="true" weight="0.32909605" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32909605" />
       <window_info id="Capture Tool" order="2" />
@@ -561,7 +727,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49932885" weight="0.32909605" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -572,28 +737,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/iair2122MV/MainClass.java</url>
-          <line>157</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="7" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/files/contacts.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/files/activities.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/repositories/RepositoryContact.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -813,13 +960,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/gui/models/TableModelContact.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/repositories/RepositoryUserMock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/App.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -849,13 +989,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/files/users.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="21" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/exceptions/InvalidFormatException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -870,23 +1003,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/iair2122MV/ContactTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/model/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="107" selection-start-line="107" selection-end-line="107" />
         </state>
       </provider>
     </entry>
@@ -911,20 +1027,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/repositories/RepositoryActivityFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="139" column="44" lean-forward="true" selection-start-line="139" selection-start-column="44" selection-end-line="139" selection-end-column="44" />
-          <folding>
-            <element signature="e#1073#1074#0" expanded="true" />
-            <element signature="e#1123#1124#0" expanded="true" />
-            <element signature="e#2333#2334#0" expanded="true" />
-            <element signature="e#2364#2365#0" expanded="true" />
-            <element signature="e#2964#2996#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -984,10 +1086,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/repositories/RepositoryActivityFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="24" />
+          <folding>
+            <element signature="e#1073#1074#0" expanded="true" />
+            <element signature="e#1123#1124#0" expanded="true" />
+            <element signature="e#2333#2334#0" expanded="true" />
+            <element signature="e#2364#2365#0" expanded="true" />
+            <element signature="e#2964#2996#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/model/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="111" column="50" selection-start-line="111" selection-start-column="50" selection-end-line="111" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/MainClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="75" column="61" selection-start-line="75" selection-start-column="61" selection-end-line="75" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/files/users.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/repositories/RepositoryUserFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+        <state relative-caret-position="204">
+          <caret line="51" column="70" lean-forward="true" selection-start-line="51" selection-start-column="70" selection-end-line="51" selection-end-column="70" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1386#1387#0" expanded="true" />
@@ -1004,13 +1144,229 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/MainClass.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/iair2122MV/ContactTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="40" column="20" lean-forward="true" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="32" />
+        <state relative-caret-position="-307">
+          <caret line="17" column="59" lean-forward="true" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/Andreea/Desktop/Andreea/Facultate/Anul_III/Semestrul_II/VVSS/Labs/Project/Lab01/src">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src</OriginalElement>
+          <nodes />
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="240.0" y="240.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/iair2122MV/repositories/RepositoryUserMock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/iair2122MV">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>iair2122MV</OriginalElement>
+          <nodes>
+            <node x="861.3812499999999" y="514.0">iair2122MV.repositories.RepositoryContactFile</node>
+            <node x="764.5822916666664" y="0.0">iair2122MV.exceptions.InvalidFormatException</node>
+            <node x="637.7291666666665" y="770.0">iair2122MV.model.Activity</node>
+            <node x="126.91666666666652" y="836.0">iair2122MV.model.User</node>
+            <node x="664.3333333333333" y="1168.0">iair2122MV.repositories.RepositoryActivityFile</node>
+            <node x="642.1458333333333" y="1454.0">iair2122MV.MainClass</node>
+            <node x="10.5" y="1146.0">iair2122MV.repositories.RepositoryUserFile</node>
+            <node x="729.5822916666664" y="80.0">iair2122MV.model.Contact</node>
+            <node x="527.2291666666665" y="525.0">iair2122MV.repositories.RepositoryContactMock</node>
+            <node x="396.2791666666664" y="146.0">iair2122MV.repositories.IRepository</node>
+            <node x="345.3333333333332" y="1168.0">iair2122MV.repositories.RepositoryActivityMock</node>
+            <node x="1238.0270833333332" y="0.0">iair2122MV.repositories.RepositoryUserMock</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="iair2122MV.repositories.RepositoryUserFile" target="iair2122MV.repositories.IRepository">
+              <point x="-102.0" y="-114.0" />
+              <point x="61.5" y="1126.0" />
+              <point x="105.28937499999984" y="1126.0" />
+              <point x="105.28937499999984" y="494.0" />
+              <point x="417.37916666666644" y="494.0" />
+              <point x="-84.39999999999998" y="81.0" />
+            </edge>
+            <edge source="iair2122MV.repositories.RepositoryContactFile" target="iair2122MV.model.Contact">
+              <point x="22.25" y="-103.0" />
+              <point x="1017.1312499999999" y="414.0" />
+              <point x="911.0822916666664" y="414.0" />
+              <point x="60.5" y="147.0" />
+            </edge>
+            <edge source="iair2122MV.model.Activity" target="iair2122MV.repositories.RepositoryContactFile">
+              <point x="108.66666666666674" y="-158.0" />
+              <point x="909.3958333333333" y="750.0" />
+              <point x="894.7562499999999" y="750.0" />
+              <point x="-100.125" y="103.0" />
+            </edge>
+            <edge source="iair2122MV.MainClass" target="iair2122MV.repositories.RepositoryUserFile">
+              <point x="-156.91666666666686" y="-70.0" />
+              <point x="754.2291666666663" y="1414.0" />
+              <point x="240.0" y="1414.0" />
+              <point x="76.5" y="114.0" />
+            </edge>
+            <edge source="iair2122MV.repositories.RepositoryContactMock" target="iair2122MV.repositories.IRepository">
+              <point x="-100.80000000000007" y="-92.0" />
+              <point x="552.4291666666663" y="494.0" />
+              <point x="543.9791666666663" y="494.0" />
+              <point x="42.19999999999993" y="81.0" />
+            </edge>
+            <edge source="iair2122MV.repositories.RepositoryActivityMock" target="iair2122MV.repositories.IRepository">
+              <point x="-99.66666666666674" y="-92.0" />
+              <point x="395.16666666666646" y="1126.0" />
+              <point x="460.29791666666654" y="1126.0" />
+              <point x="-42.19999999999999" y="81.0" />
+            </edge>
+            <edge source="iair2122MV.MainClass" target="iair2122MV.model.Activity">
+              <point x="22.41666666666663" y="-70.0" />
+              <point x="933.5624999999998" y="1424.0" />
+              <point x="973.8333333333333" y="1424.0" />
+              <point x="973.8333333333333" y="1116.0" />
+              <point x="882.2291666666665" y="1116.0" />
+              <point x="81.49999999999999" y="158.0" />
+            </edge>
+            <edge source="iair2122MV.MainClass" target="iair2122MV.model.Contact">
+              <point x="246.58333333333337" y="-70.0" />
+              <point x="1157.7291666666665" y="1434.0" />
+              <point x="1168.0270833333332" y="1434.0" />
+              <point x="1168.0270833333332" y="394.0" />
+              <point x="959.4822916666662" y="394.0" />
+              <point x="108.89999999999986" y="147.0" />
+            </edge>
+            <edge source="iair2122MV.MainClass" target="iair2122MV.model.User">
+              <point x="-112.08333333333348" y="-70.0" />
+              <point x="799.0624999999998" y="1404.0" />
+              <point x="334.83333333333326" y="1404.0" />
+              <point x="334.83333333333326" y="1126.0" />
+              <point x="338.5833333333332" y="1126.0" />
+              <point x="84.66666666666669" y="92.0" />
+            </edge>
+            <edge source="iair2122MV.repositories.RepositoryContactFile" target="iair2122MV.repositories.IRepository">
+              <point x="-111.25" y="-103.0" />
+              <point x="883.6312499999999" y="444.0" />
+              <point x="586.1791666666663" y="444.0" />
+              <point x="84.39999999999998" y="81.0" />
+            </edge>
+            <edge source="iair2122MV.repositories.RepositoryUserFile" target="iair2122MV.model.User">
+              <point x="102.0" y="-114.0" />
+              <point x="265.5" y="1126.0" />
+              <point x="253.91666666666652" y="1126.0" />
+              <point x="0.0" y="92.0" />
+            </edge>
+            <edge source="iair2122MV.MainClass" target="iair2122MV.exceptions.InvalidFormatException">
+              <point x="-246.5833333333336" y="-70.0" />
+              <point x="664.5624999999995" y="1434.0" />
+              <point x="0.0" y="1434.0" />
+              <point x="0.0" y="50.0" />
+              <point x="781.7822916666664" y="50.0" />
+              <point x="-68.79999999999995" y="15.0" />
+            </edge>
+            <edge source="iair2122MV.MainClass" target="iair2122MV.repositories.RepositoryActivityFile">
+              <point x="-67.25000000000011" y="-70.0" />
+              <point x="843.895833333333" y="1394.0" />
+              <point x="739.0833333333333" y="1394.0" />
+              <point x="-74.75" y="92.0" />
+            </edge>
+            <edge source="iair2122MV.model.Contact" target="iair2122MV.exceptions.InvalidFormatException">
+              <point x="0.0" y="-147.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="iair2122MV.repositories.RepositoryActivityFile" target="iair2122MV.repositories.RepositoryContactFile">
+              <point x="112.12499999999999" y="-92.0" />
+              <point x="925.9583333333333" y="1126.0" />
+              <point x="998.5416666666665" y="1126.0" />
+              <point x="998.5416666666665" y="750.0" />
+              <point x="961.5062499999999" y="750.0" />
+              <point x="-33.375" y="103.0" />
+            </edge>
+            <edge source="iair2122MV.repositories.RepositoryActivityMock" target="iair2122MV.model.Activity">
+              <point x="0.0" y="-92.0" />
+              <point x="494.8333333333332" y="1116.0" />
+              <point x="664.8958333333331" y="1116.0" />
+              <point x="-135.83333333333337" y="158.0" />
+            </edge>
+            <edge source="iair2122MV.repositories.RepositoryContactMock" target="iair2122MV.exceptions.InvalidFormatException">
+              <point x="-50.40000000000009" y="-92.0" />
+              <point x="602.8291666666664" y="494.0" />
+              <point x="640.5822916666664" y="494.0" />
+              <point x="640.5822916666664" y="60.0" />
+              <point x="816.1822916666665" y="60.0" />
+              <point x="-34.39999999999998" y="15.0" />
+            </edge>
+            <edge source="iair2122MV.repositories.RepositoryActivityFile" target="iair2122MV.model.Activity">
+              <point x="-37.375" y="-92.0" />
+              <point x="776.4583333333333" y="1126.0" />
+              <point x="773.5624999999998" y="1126.0" />
+              <point x="-27.166666666666742" y="158.0" />
+            </edge>
+            <edge source="iair2122MV.repositories.RepositoryActivityFile" target="iair2122MV.repositories.IRepository">
+              <point x="-112.125" y="-92.0" />
+              <point x="701.7083333333333" y="1106.0" />
+              <point x="513.9893749999998" y="1106.0" />
+              <point x="513.9893749999998" y="494.0" />
+              <point x="501.7791666666664" y="494.0" />
+              <point x="0.0" y="81.0" />
+            </edge>
+            <edge source="iair2122MV.model.Activity" target="iair2122MV.model.Contact">
+              <point x="-108.66666666666674" y="-158.0" />
+              <point x="692.0624999999998" y="750.0" />
+              <point x="789.7291666666665" y="750.0" />
+              <point x="789.7291666666665" y="484.0" />
+              <point x="814.2822916666664" y="484.0" />
+              <point x="-36.299999999999955" y="147.0" />
+            </edge>
+            <edge source="iair2122MV.MainClass" target="iair2122MV.repositories.RepositoryContactFile">
+              <point x="112.08333333333337" y="-70.0" />
+              <point x="1023.2291666666665" y="1404.0" />
+              <point x="1097.1352083333331" y="1404.0" />
+              <point x="1097.1352083333331" y="750.0" />
+              <point x="1028.25625" y="750.0" />
+              <point x="33.375" y="103.0" />
+            </edge>
+            <edge source="iair2122MV.repositories.RepositoryContactFile" target="iair2122MV.exceptions.InvalidFormatException">
+              <point x="66.75" y="-103.0" />
+              <point x="1061.63125" y="484.0" />
+              <point x="1116.6541666666667" y="484.0" />
+              <point x="1116.6541666666667" y="60.0" />
+              <point x="884.9822916666665" y="60.0" />
+              <point x="34.39999999999998" y="15.0" />
+            </edge>
+            <edge source="iair2122MV.repositories.RepositoryContactMock" target="iair2122MV.model.Contact">
+              <point x="100.79999999999995" y="-92.0" />
+              <point x="754.0291666666665" y="474.0" />
+              <point x="790.0822916666664" y="474.0" />
+              <point x="-60.5" y="147.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="617.0" y="1358.5" />
+          <SelectedNodes>
+            <node>iair2122MV.MainClass</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
