@@ -1,8 +1,10 @@
 package iair2122MV.repositories;
 
 import iair2122MV.model.Activity;
+import iair2122MV.model.Contact;
 
 import java.io.*;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -41,35 +43,14 @@ public class RepositoryActivityFile implements IRepository<Activity>{
 		return new LinkedList<Activity>(activities);
 	}
 
-	@Override
-	public boolean add(Activity activity) {
-		int  i = 0;
-		boolean conflicts = false;
 
-		while( i < activities.size() && !conflicts)
-		{
-			if ( activities.get(i).getStart().compareTo(activity.getDuration()) < 0 &&
-					activity.getStart().compareTo(activities.get(i).getDuration()) < 0 )
-				conflicts = true;
-			i++;
-		}
-		if ( !conflicts )
-		{
-			activities.add(activity);
-			return true;
-		}
-		return false;
-//		for (int i = 0; i< activities.size(); i++)
-//		{
-//			if (activity.intersect(activities.get(i))) return false;
-//		}	
-//		int index = activities.indexOf(activity);
-//		//if (index >= 0 ) return false;
-//		activities.add(activity);
-//		return true;
-	}
+    @Override
+    public boolean add(Activity entity) {
+        activities.add(entity);
+        return true;
+    }
 
-	@Override
+    @Override
 	public boolean remove(Activity activity) {
 		int index = activities.indexOf(activity);
 		if (index<0) return false;
@@ -122,13 +103,11 @@ public class RepositoryActivityFile implements IRepository<Activity>{
 	}
 
 	@SuppressWarnings("deprecation")
-	public List<Activity> activitiesOnDate(String name, Date d) {
+	public List<Activity> activitiesOnDate(String name, LocalDate d) {
 		List<Activity> partialResult = new LinkedList<Activity>();
 		for (Activity activity : activities)
 			if (activity.getName().equals(name))
-				if ((activity.getStart().getYear() == d.getYear() &&
-					activity.getStart().getMonth() == d.getMonth() &&
-					activity.getStart().getDate() == d.getDate())) partialResult.add(activity);
+				if (activity.getStart().compareTo(d) == 0){ partialResult.add(activity);}
 		List<Activity> result = new LinkedList<Activity>();
 		while (partialResult.size() > 0 )
 		{
@@ -146,4 +125,9 @@ public class RepositoryActivityFile implements IRepository<Activity>{
 		}
 		return result;
 	}
+
+    public boolean addActivity(String username, String description, LocalDate start, LocalDate end, LinkedList<Contact> contacts) {
+        activities.add(new Activity(username, start, end, contacts, description));
+        return true;
+    }
 }

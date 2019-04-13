@@ -2,7 +2,9 @@ package iair2122MV.repositories;
 
 
 import iair2122MV.model.Activity;
+import iair2122MV.model.Contact;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -44,32 +46,34 @@ public class RepositoryActivityMock implements IRepository<Activity> {
 		return new LinkedList<Activity>(activities);
 	}
 
-	@Override
-	public boolean add(Activity activity) {
-		int  i = 0;
-		boolean conflicts = false;
-		
-		while( i < activities.size() )
-		{
-			if ( activities.get(i).getStart().compareTo(activity.getDuration()) < 0 &&
-					activity.getStart().compareTo(activities.get(i).getDuration()) < 0 )
-				conflicts = true;
+	public void removeAll(){
+        for (Activity activity:this.activities
+             ) {
+            this.activities.remove(activity);
+        }
+    }
+
+	public boolean addActivity(String description, LocalDate startDate, LocalDate endDate, List<Contact> contacts) {
+		int  i = 0; boolean conflicts = false; boolean result = false;
+		while( i < activities.size()) {
+			if ( description.compareTo(activities.get(i).getDescription()) == 0){
+				if(startDate.compareTo(activities.get(i).getStart()) == 0){
+					conflicts = true;
+				}
+			}
 			i++;
 		}
-		if ( !conflicts )
-		{
-			activities.add(activity);
-			return true;
+		if ( !conflicts ) {
+			activities.add(new Activity("username1", startDate, endDate, contacts, description));
+			result = true;
 		}
-		return false;
-//		for (int i = 0; i< activities.size(); i++)
-//		{
-//			if (activity.intersect(activities.get(i))) return false;
-//		}	
-//		int index = activities.indexOf(activity);
-//		//if (index >= 0 ) return false;
-//		activities.add(activity);
-//		return true;
+		return result;
+	}
+
+	@Override
+	public boolean add(Activity activity) {
+		this.activities.add(activity);
+		return true;
 	}
 
 	@Override
@@ -98,11 +102,17 @@ public class RepositoryActivityMock implements IRepository<Activity> {
 		return result;
 	}
 
-	public List<Activity> activitiesOnDate(String name, Date d) {
+	public Activity getByDescription(String description){
+        for (Activity a : activities)
+            if (a.getDescription().equals(description)) return a;
+        return null;
+    }
+
+	public List<Activity> activitiesOnDate(String name, LocalDate d) {
 		List<Activity> result = new LinkedList<Activity>();
 		for (Activity a : activities)
 			if (a.getName().equals(name))
-				if (a.getStart().compareTo(d) <= 0 && d.compareTo(a.getDuration()) <= 0 ) result.add(a);
+				if (a.getStart().compareTo(d) <= 0 ) result.add(a);
 		return result;
 	}
 

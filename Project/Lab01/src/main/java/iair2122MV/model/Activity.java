@@ -1,50 +1,61 @@
 package iair2122MV.model;
 
 import iair2122MV.repositories.RepositoryContactFile;
+import sun.rmi.server.LoaderHandler;
 
+import java.time.Duration;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
 
+import static java.time.temporal.ChronoUnit.DAYS;
+
 public class Activity {
 	private String name;
-	private Date start;
-	private Date duration;
+	private LocalDate start;
+	private long duration;
 	private List<Contact> contacts;
 	private String description;
 	
-	public Activity(String name, Date start, Date end, List<Contact> contacts,
-			String description) {
+	public Activity(String name, LocalDate start, LocalDate end, List<Contact> contacts,
+					String description) {
 		this.name = name;
 		this.description = description;
+		this.start = start;
+		this.duration = DAYS.between(start, end);
 		if (contacts == null)
 			this.contacts = new LinkedList<Contact>();
 		else
 			this.contacts = new LinkedList<Contact>(contacts);
-
-		this.start = new Date();
-		this.start.setTime(start.getTime());
-		this.duration = new Date();
-		this.duration.setTime(end.getTime() - start.getTime());
 	}
 
-	public String getName() {
+    public Activity(String name, LocalDate start, long duration, List<Contact> contacts, String description) {
+        this.name = name;
+        this.start = start;
+        this.duration = duration;
+        this.contacts = contacts;
+        this.description = description;
+    }
+
+    public String getName() {
 		return name;
 	}
 
-	public Date getStart() {
+	public LocalDate getStart() {
 		return start;
 	}
 
-	public void setStart(Date start) {
+	public void setStart(LocalDate start) {
 		this.start = start;
 	}
 
-	public Date getDuration() {
+	public long getDuration() {
 		return duration;
 	}
 
-	public void setDuration(Date duration) {
+	public void setDuration(long duration) {
 		this.duration = duration;
 	}
 
@@ -70,14 +81,7 @@ public class Activity {
 			return false;
 		Activity act = (Activity) obj;
 		if (act.description.equals(description) && start.equals(act.start)
-				&& duration.equals(act.duration) && name.equals(act.name))
-			return true;
-		return false;
-	}
-
-	public boolean intersect(Activity act) {
-		if (start.compareTo(act.duration) < 0
-				&& act.start.compareTo(duration) < 0)
+				&& duration == act.duration && name.equals(act.name))
 			return true;
 		return false;
 	}
@@ -87,9 +91,9 @@ public class Activity {
 		StringBuilder sb = new StringBuilder();
 		sb.append(name);
 		sb.append("#");
-		sb.append(start.getTime());
+		sb.append(start.toString());
 		sb.append("#");
-		sb.append(duration.getTime());
+		sb.append(duration);
 		sb.append("#");
 		sb.append(description);
 		sb.append("#");
@@ -104,8 +108,9 @@ public class Activity {
 		try {
 			String[] str = line.split("#");
 			String name = str[0];
-			Date start = new Date(Long.parseLong(str[1]));
-			Date duration = new Date(Long.parseLong(str[2]));
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
+            LocalDate start = LocalDate.parse("2005-10-12", formatter);
+			long duration = Integer.parseInt(str[2]);
 			String description = str[3];
 			List<Contact> conts = new LinkedList<Contact>();
 			for (int i = 5; i < str.length; i++) {

@@ -9,6 +9,8 @@ import iair2122MV.repositories.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.LinkedList;
@@ -77,13 +79,10 @@ public class MainClass {
 			BufferedReader in, User user) {
 		try {
 			System.out.printf("Afisare Activitate: \n");
-			System.out.printf("Data(format: mm/dd/yyyy): ");
+			System.out.printf("Data(format: yyyy-MMM-dd): ");
 			String dateS = in.readLine();
-			Calendar c = Calendar.getInstance();
-			c.set(Integer.parseInt(dateS.split("/")[2]),
-					Integer.parseInt(dateS.split("/")[0]) - 1,
-					Integer.parseInt(dateS.split("/")[1]));
-			Date d = c.getTime();
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
+			LocalDate d = LocalDate.parse(dateS, formatter);
 
 			System.out.println("Activitatile din ziua " + d.toString() + ": ");
 
@@ -91,7 +90,7 @@ public class MainClass {
 					.activitiesOnDate(user.getName(), d);
 			for (Activity a : act) {
 				System.out.printf("%s - %s: %s - %s with: ", a.getStart()
-						.toString(), a.getDuration().toString(), a
+						.toString(), a.getDuration(), a
 						.getDescription());
 				for (Contact con : a.getContacts())
 					System.out.printf("%s, ", con.getName());
@@ -108,34 +107,20 @@ public class MainClass {
 			System.out.printf("Adauga Activitate: \n");
 			System.out.printf("Descriere: ");
 			String description = in.readLine();
-			System.out.printf("Start Date(format: mm/dd/yyyy): ");
+			System.out.printf("Start Date(format: yyyy-MMM-dd): ");
 			String dateS = in.readLine();
-			System.out.printf("Start Time(hh:mm): ");
-			String timeS = in.readLine();
-			Calendar c = Calendar.getInstance();
-			c.set(Integer.parseInt(dateS.split("/")[2]),
-					Integer.parseInt(dateS.split("/")[0]) - 1,
-					Integer.parseInt(dateS.split("/")[1]),
-					Integer.parseInt(timeS.split(":")[0]),
-					Integer.parseInt(timeS.split(":")[1]));
-			Date start = c.getTime();
-
-			System.out.printf("End Date(format: mm/dd/yyyy): ");
+			System.out.printf("End Date(format: yyyy-MMM-dd): ");
 			String dateE = in.readLine();
-			System.out.printf("End Time(hh:mm): ");
-			String timeE = in.readLine();
-			
-			c.set(Integer.parseInt(dateE.split("/")[2]),
-					Integer.parseInt(dateE.split("/")[0]) - 1,
-					Integer.parseInt(dateE.split("/")[1]),
-					Integer.parseInt(timeE.split(":")[0]),
-					Integer.parseInt(timeE.split(":")[1]));
-			Date end = c.getTime();
+
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MMM-dd");
+			LocalDate start = LocalDate.parse(dateS, formatter);
+			LocalDate end = LocalDate.parse(dateE, formatter);
 
 			Activity act = new Activity(user.getName(), start, end,
 					new LinkedList<Contact>(), description);
 
-			activityRep.add(act);
+			activityRep.addActivity(user.getUsername(), description, start, end, new LinkedList<Contact>());
+			//activityRep.add(act);
 
 			System.out.printf("S-a adugat cu succes\n");
 		} catch (IOException e) {
