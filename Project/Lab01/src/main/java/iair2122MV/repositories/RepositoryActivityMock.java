@@ -5,6 +5,7 @@ import iair2122MV.model.Activity;
 import iair2122MV.model.Contact;
 
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -109,11 +110,14 @@ public class RepositoryActivityMock implements IRepository<Activity> {
     }
 
 	public List<Activity> activitiesOnDate(String name, LocalDate d) {
-		List<Activity> result = new LinkedList<Activity>();
-		for (Activity a : activities)
-			if (a.getName().equals(name))
-				if (a.getStart().compareTo(d) <= 0 ) result.add(a);
-		return result;
-	}
-
+	    List<Activity> result = new LinkedList<Activity>();
+	    for (Activity activity : activities)
+	        if (activity.getName().equals(name)){
+	        if (activity.getStart().compareTo(d) == 0){
+	            result.add(activity);
+	        }
+	    }
+        result.sort(Comparator.comparing(Activity::getStartTime));
+	    return result;
+    }
 }

@@ -5,6 +5,7 @@ import iair2122MV.model.Contact;
 
 import java.io.*;
 import java.time.LocalDate;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -102,27 +103,15 @@ public class RepositoryActivityFile implements IRepository<Activity>{
 		return result;
 	}
 
-	@SuppressWarnings("deprecation")
 	public List<Activity> activitiesOnDate(String name, LocalDate d) {
-		List<Activity> partialResult = new LinkedList<Activity>();
-		for (Activity activity : activities)
-			if (activity.getName().equals(name))
-				if (activity.getStart().compareTo(d) == 0){ partialResult.add(activity);}
 		List<Activity> result = new LinkedList<Activity>();
-		while (partialResult.size() > 0 )
-		{
-			Activity activity = partialResult.get(0);
-			int index = 0;
-			for (int activityCounter = 1; activityCounter<partialResult.size(); activityCounter++)
-				if (activity.getStart().compareTo(partialResult.get(activityCounter).getStart())>0)
-				{
-					index = activityCounter;
-					activity = partialResult.get(activityCounter);
-				}
-			
-			result.add(activity);
-			partialResult.remove(index);
-		}
+		for (Activity activity : activities)
+			if (activity.getName().equals(name)){
+                if (activity.getStart().compareTo(d) == 0){
+                    result.add(activity);
+                }
+            }
+        result.sort(Comparator.comparing(Activity::getStartTime));
 		return result;
 	}
 

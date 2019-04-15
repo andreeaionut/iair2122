@@ -1,12 +1,11 @@
 package iair2122MV.model;
 
 import iair2122MV.repositories.RepositoryContactFile;
-import sun.rmi.server.LoaderHandler;
 
-import java.time.Duration;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -15,12 +14,21 @@ import static java.time.temporal.ChronoUnit.DAYS;
 public class Activity {
 	private String name;
 	private LocalDate start;
+	private LocalTime startTime;
 	private long duration;
 	private List<Contact> contacts;
 	private String description;
-	
-	public Activity(String name, LocalDate start, LocalDate end, List<Contact> contacts,
-					String description) {
+
+    public Activity(String name, LocalDate start, LocalTime startTime, String description) {
+        this.name = name;
+        this.start = start;
+        this.startTime = startTime;
+        this.description = description;
+        this.contacts = new ArrayList<>();
+    }
+
+    public Activity(String name, LocalDate start, LocalDate end, List<Contact> contacts,
+                    String description) {
 		this.name = name;
 		this.description = description;
 		this.start = start;
@@ -121,4 +129,12 @@ public class Activity {
 			return null;
 		}
 	}
+
+    public LocalTime getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(LocalTime startTime) {
+        this.startTime = startTime;
+    }
 }
